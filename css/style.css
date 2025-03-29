@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+}
+
+body {
+    height: 100vh;
+
+}
+
+.formulario {
+    width: 100%;
+}
+
+.formulario .container {
+    width: 100%;
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.formulario form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: blue;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 6px 5px 10px #0000004f;
+}
+
+.formulario form label {
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.formulario form input {
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.formulario form button {
+    margin-top: 20px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav a {
+    padding: 15px;
+    color: white;
+}
+
+/* Menu hambúrguer */
+#burguer {
+    color: white;
+    padding: 10px;
+    display: none;
+}
+
+section {
+    margin: 40px auto;
+}
+
+
+.sobre div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sobre img {
+    max-width: 300px;
+    width: 100%;
+}
+
+.sobre article {
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid black;
+    text-indent: .8rem;
+
+}
+
+.cardDepoimentos {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    margin: 30px;
+    padding: 20px;
+    background-color: yellow;
+
+}
+.cardDepoimentos img{
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    width: 100%;
+}
+
+/* footer */
+footer {
+    background-color: gray;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p a {
+    opacity: 0.6;
+    color: white;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+footer>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    flex-direction: row;
+
+}
+
+.containerSocial {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.contatos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contatos p {
+    width: 50%;
+    padding: 10px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.fa-envelope,
+.fa-whatsapp,
+.fa-linkedin {
+    max-width: 50px;
+    width: 50%;
+    padding: 10px;
+}
+
+footer div i {
+    font-size: 20px;
+}
+
+footer img {
+    width: 15em;
+}
+
+.fa-envelope:hover,
+.fa-whatsapp:hover,
+.fa-linkedin:hover {
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+    transform: scale(1.3);
+    opacity: 0.7;
+}
+
+.fa-envelope {
+    color: #db4a39;
+}
+
+.fa-whatsapp {
+    color: #a4c639;
+}
+
+.fa-linkedin {
+    color: #756aa7;
+}
+
+.fa-face-dizzy {
+    color: rgb(168, 168, 19);
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+.promocao {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.promocao button {
+    background-color: green;
+    color: white;
+    outline: none;
+    border: none;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
