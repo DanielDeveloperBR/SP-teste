@@ -1,0 +1,72 @@
+@media all and (max-width: 585px) {
+    nav {
+        display: none;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: gray;
+        position: absolute;
+    }
+    nav li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid white;
+        margin-left: 0;
+    }
+
+    #burguer {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .sobre div {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 605px) {
+    .cardDepoimentos {
+        max-width: 270px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 300px){
+    .contatos p{
+        display: none;
+    }
+
+    .cardDepoimentos{
+        margin: 20px;
+        max-width: 290px;
+    }
+}
+
+@media (max-width: 450px){
+    .promocao{
+        flex-direction: column;
+    }
+  
+}
+
+  @media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media all and (max-width: 380px){
+
+    .close{
+        top: -20%;
+    }
+    .next {
+        right: -15px;
+    }
+    .prev{
+        left: -15px;
+    }
+
+}

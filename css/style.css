@@ -4,7 +4,6 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-
 }
 
 body {
@@ -12,8 +11,79 @@ body {
 
 }
 
+main {
+    display: none;
+    max-width: 1200px;
+    min-width: 260px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+
+}
+
+header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0px 3px 20px #0000005c;
+}
+
+header a img,
+.cardDepoimentos img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    display: block;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav a {
+    padding: 15px;
+    color: white;
+}
+
+/* Menu hambúrguer */
+#burguer {
+    color: white;
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.h1Section {
+    margin: 20px auto;
+    margin-top: 80px;
+}
+
 .formulario {
     width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .formulario .container {
@@ -43,6 +113,7 @@ body {
 .formulario form input {
     border-radius: 20px;
     padding: 5px;
+    width: 100%;
 }
 
 .formulario form button {
@@ -54,90 +125,82 @@ body {
     font-size: 1.2rem;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
-    background-color: blue;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 15px;
-}
-
-nav a {
-    padding: 15px;
-    color: white;
-}
-
-/* Menu hambúrguer */
-#burguer {
-    color: white;
-    padding: 10px;
-    display: none;
-}
-
 section {
     margin: 40px auto;
 }
-
 
 .sobre div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
 }
 
 .sobre img {
     max-width: 300px;
     width: 100%;
+    border-radius: 20px;
+    border: 2px solid white;
 }
 
-.sobre article {
+.sobre article,
+.promocao p {
     max-width: 500px;
     width: 100%;
     border: 1px solid black;
-    text-indent: .8rem;
+    text-indent: 1rem;
+    text-align: justify;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
 
 }
 
 .cardDepoimentos {
-    display: inline-flex;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin: 30px;
+    margin: 30px auto;
     padding: 20px;
     background-color: yellow;
-
+    max-width: 600px;
+    border-radius: 10px;
 }
-.cardDepoimentos img{
+
+.cardDepoimentos p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cardDepoimentos img {
     max-width: 50px;
     height: 50px;
     border-radius: 50%;
-    width: 100%;
 }
+
 
 /* footer */
 footer {
     background-color: gray;
     text-align: center;
     color: white;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
+}
+
+footer h1{
+    margin-top: 15px;
 }
 
 footer p a {
     opacity: 0.6;
     color: white;
     font-style: italic;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 footer>div {
@@ -149,6 +212,16 @@ footer>div {
     padding: 20px;
     flex-direction: row;
 
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 14px;
+    font-style: italic;
 }
 
 .containerSocial {
@@ -166,9 +239,9 @@ footer>div {
 
 .contatos p {
     width: 50%;
-    padding: 10px;
+    padding: 5px;
     text-align: justify;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .fa-envelope,
@@ -185,6 +258,7 @@ footer div i {
 
 footer img {
     width: 15em;
+    border-radius: 10px;
 }
 
 .fa-envelope:hover,
@@ -216,24 +290,47 @@ footer img {
 }
 
 .promocao {
-    background-color: red;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     margin: auto;
     padding: 20px;
     width: 100%;
+    background-image: url("../assets/promocao.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .promocao button {
     background-color: green;
     color: white;
     outline: none;
-    border: none;
-    max-width: 300px;
+    max-width: 400px;
     width: 100%;
     border-radius: 2rem;
     padding: 20px;
+    font-weight: bolder;
+    font-style: italic;
+    border: 3px solid white;
+    box-shadow: 5px 5px 6px #0000005e;
+}
+
+.containerContador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+
+#contador {
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: full-width;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 img {

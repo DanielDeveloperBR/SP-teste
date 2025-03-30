@@ -1,0 +1,114 @@
+.carousel-item img {
+    width: 100%;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    border: 2px solid #007bff;
+}
+
+
+/* Estilo do grid de imagens */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 3px 2px 8px #04196c3d;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    width: auto;
+    border-radius: 8px;
+}
+
+/* Botão de fechar (X) */
+.close {
+    position: absolute;
+    top: -5%;
+    right: 0%;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translate(-50%, 0%);
+}
+
+/* Setas de navegação */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 40px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.containerModalImg {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+}
+
