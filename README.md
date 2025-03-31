@@ -77,4 +77,4 @@ Este projeto está licenciado sob a Licença personalizada - consulte o arquivo 
 - **Tecnologias Utilizadas**: Lista as principais tecnologias usadas no desenvolvimento.
 - **Como Rodar o Projeto**: Instruções detalhadas de como configurar e rodar o projeto localmente.
 - **Autor**: Informações sobre o autor do projeto, incluindo links úteis.
-- **Licença**: Indica a licença do projeto (exemplo usando MIT, você pode adaptar conforme sua escolha).
+- **Licença**: Indica a licença do projeto.
