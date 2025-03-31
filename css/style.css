@@ -51,7 +51,7 @@ main {
     width: 100%;
     margin: auto;
 }
-
+/* Header e navegação */
 header {
     display: none;
     justify-content: space-between;
@@ -113,15 +113,7 @@ h2 {
     margin: 20px auto;
     margin-top: 80px;
 }
-
-.formulario {
-    width: 100%;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
+/* Mensagem para o form */
 #mensagem {
     position: absolute;
     display: none;
@@ -135,7 +127,14 @@ h2 {
     top: 90%;
     transform: translate(-50%, -50%);
 }
-
+/* Formulário */
+.formulario {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 .formulario .container {
     width: 100%;
     padding: 20px;
@@ -181,6 +180,7 @@ section {
     margin: 40px auto;
 }
 
+/* Sobre */
 .sobre {
     background-image: url("../assets/cafe.jpg");
     background-size: cover;
@@ -221,7 +221,7 @@ section {
     color: white;
 
 }
-
+/* Depoimentos */
 #depoimentos {
     background-image: url("../assets/cafe.jpg");
     background-size: cover;
@@ -365,7 +365,7 @@ footer img {
     font-weight: bolder;
 
 }
-
+/* Promoção */
 .promocao {
     display: none;
     align-items: center;

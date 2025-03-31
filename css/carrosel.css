@@ -1,3 +1,4 @@
+/* Carrosel */
 .carousel-item img{
     width: 100%;
 }
@@ -120,6 +121,8 @@
 #depoimentosDeslize .carousel-control-next-icon {
     filter: invert(100%); 
 }
+
+/* Botao do footer para subir para o header */
 .btn-topo {
     position: fixed;
     bottom: 20px;
