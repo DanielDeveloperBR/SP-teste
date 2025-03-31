@@ -5,38 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste técnico | BookPrizes</title>
+    <meta name="description"
+        content="O BookPrizes™ é uma plataforma inovadora que transforma a leitura em uma experiência divertida e recompensadora. Complete desafios de leitura, faça análises críticas de livros e conquiste prêmios exclusivos. Torne sua jornada literária ainda mais emocionante!">
+
+    <meta http-equiv="Cache-Control" content="max-age=604800">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&family=Secular+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animacao.css">
     <link rel="stylesheet" href="css/responsivo.css">
     <link rel="stylesheet" href="css/carrosel.css">
-    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-       
-
-
-    </style>
 </head>
 
-<body>
 
+<body>
+    <div id="modal">
+        <div id="loading-spinner"></div>
+    </div>
     <!-- Formulário de início -->
     <section class="formulario">
         <div class="container">
             <form action="" id="formTeste">
                 <label for="nome">nome</label>
-                <input type="text" name="nome" id="nome">
+                <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" max="30">
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email">
+                <input type="text" name="email" id="email" placeholder="seuemail@exemple.com" maxlength="100">
                 <label for="telefone">Telefone</label>
-                <input type="number" name="telefone" id="telefone">
+                <input type="text" name="telefone" id="telefone" placeholder="(11) 98765-1234" maxlength="15">
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </section>
+    <div id="mensagem"></div>
 
     <!-- Header e navegação -->
     <header>
@@ -44,10 +56,9 @@
         <span class="material-symbols-outlined" id="burguer">menu</span>
         <nav>
             <ul class="mb-0 p-0">
-                <li><a href="#sobre" class="text-decoration-none">Sobre</a></li>
-                <li><a href="#galeria" class="text-decoration-none">Galeria</a></li>
-                <li><a href="#depoimentos" class="text-decoration-none">Depoimentos</a></li>
-                <li><a href="#promocao" class="text-decoration-none">Promoção</a></li>
+                <li><a href="#sobre" class="text-decoration-none icon-link">Sobre</a></li>
+                <li><a href="#galeria" class="text-decoration-none icon-link">Galeria</a></li>
+                <li><a href="#depoimentos" class="text-decoration-none icon-link">Depoimentos</a></li>
             </ul>
         </nav>
     </header>
@@ -64,10 +75,10 @@
                         <img src="assets/produto3.jpg" class="d-block w-100" alt="Imagem 3">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/produto2.webp" class="d-block w-100" alt="Imagem 2">
+                        <img src="assets/produto2.jpg" class="d-block w-100" alt="Imagem 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/produto1.webp" class="d-block w-100" alt="Imagem 1">
+                        <img src="assets/produto1.jpg" class="d-block w-100" alt="Imagem 1">
                     </div>
                 </div>
 
@@ -86,11 +97,11 @@
 
             <!-- Thumbnails para navegação -->
             <div class="thumbnails">
-                <img src="assets/produto3.jpg " class="thumbnail" data-bs-target="#carroselPrincipal"
+                <img src="assets/produto3.jpg" class="thumbnail" data-bs-target="#carroselPrincipal"
                     data-bs-slide-to="0" alt="Thumbnail 1">
-                <img src="assets/produto2.webp" class="thumbnail" data-bs-target="#carroselPrincipal"
+                <img src="assets/produto2.jpg" class="thumbnail" data-bs-target="#carroselPrincipal"
                     data-bs-slide-to="1" alt="Thumbnail 2">
-                <img src="assets/produto1.webp" class="thumbnail" data-bs-target="#carroselPrincipal"
+                <img src="assets/produto1.jpg" class="thumbnail" data-bs-target="#carroselPrincipal"
                     data-bs-slide-to="2" alt="Thumbnail 3">
             </div>
         </section>
@@ -99,8 +110,10 @@
         <section class="sobre" id="sobre">
             <h1>Sobre</h1>
             <div>
-                <article>O BookPrizes™ é uma plataforma inovadora que transforma a leitura em uma experiência divertida e recompensadora. Ao completar desafios de leitura e realizar análises críticas de livros, os usuários podem conquistar prêmios e recompensas  exclusivas.</article>
-                <img src="assets/produto1.webp" alt="produto1">
+                <article>O BookPrizes™ é uma plataforma inovadora que transforma a leitura em uma experiência divertida
+                    e recompensadora.<br> Ao completar desafios de leitura e realizar análises críticas de livros, os
+                    usuários podem conquistar prêmios e recompensas exclusivas.</article>
+                <img src="assets/produto1.jpg" alt="produto1">
             </div>
         </section>
 
@@ -109,19 +122,19 @@
             <h1>Galeria de Imagens</h1>
             <div class="image-grid">
                 <div class="image-item">
-                    <img src="assets/produto1.webp" alt="Produto 1" class="gallery-img" onclick="openModal(0)">
+                    <img src="assets/produto1.jpg" alt="Produto 1" class="gallery-img" onclick="openModal(0)">
                 </div>
                 <div class="image-item">
-                    <img src="assets/produto2.webp" alt="Produto 2" class="gallery-img" onclick="openModal(1)">
+                    <img src="assets/produto2.jpg" alt="Produto 2" class="gallery-img" onclick="openModal(1)">
                 </div>
                 <div class="image-item">
                     <img src="assets/produto3.jpg" alt="Produto 3" class="gallery-img" onclick="openModal(2)">
                 </div>
                 <div class="image-item">
-                    <img src="assets/produto1.webp" alt="Produto 1" class="gallery-img" onclick="openModal(3)">
+                    <img src="assets/produto1.jpg" alt="Produto 1" class="gallery-img" onclick="openModal(3)">
                 </div>
                 <div class="image-item">
-                    <img src="assets/produto2.webp" alt="Produto 2" class="gallery-img" onclick="openModal(4)">
+                    <img src="assets/produto2.jpg" alt="Produto 2" class="gallery-img" onclick="openModal(4)">
                 </div>
                 <div class="image-item">
                     <img src="assets/produto3.jpg" alt="Produto 3" class="gallery-img" onclick="openModal(5)">
@@ -132,36 +145,42 @@
         <!-- Modal para visualizar imagem em tela cheia -->
         <div id="imageModal" class="modal">
             <div class="containerModalImg">
-                <img class="modal-content" id="modalImage" tabindex="0">
+                <img class="modal-content" id="modalImage" tabindex="0" alt="imagem do modal">
                 <span class="close" onclick="closeModal()">×</span>
 
             </div>
-            <a class="prev text-decoration-none" onclick="navigateModal(-1)">&#10094;</a>
-            <a class="next text-decoration-none" onclick="navigateModal(1)">&#10095;</a>
+            <button style="background-color: transparent;" class="prev text-decoration-none"
+                onclick="navigateModal(-1)">&#10094;</button>
+            <button style="background-color: transparent;" class="next text-decoration-none"
+                onclick="navigateModal(1)">&#10095;</button>
         </div>
 
 
+
         <!-- carrosel de depoimentos -->
-        <h2>Depoimentos</h2>
-        <section class="hero-section bg-primary py-5" id="depoimentos">
+        <h2 class="h2Depoimentos">Depoimentos</h2>
+        <section class="py-5" id="depoimentos">
             <div id="depoimentosDeslize" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner text-center">
                     <div class="carousel-item active">
                         <div class="cardDepoimentos">
-                            <p>Desde que comecei a usar o BookPrizes™, minha rotina de leitura ficou muito mais animada. Agora tenho um incentivo a mais para completar minhas metas!</p>
-                            <img src="assets/pessoa1.jpg" alt="" class="mx-auto d-block">
+                            <p>Desde que comecei a usar o BookPrizes™, minha rotina de leitura ficou muito mais animada.
+                                Agora tenho um incentivo a mais para completar minhas metas!</p>
+                            <img src="assets/pessoa1.jpg" alt="pessoa 1" class="mx-auto d-block">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="cardDepoimentos">
-                            <p>Esse desafio foi incrível! Além de refletir sobre temas profundos, conquistei recompensas que incentivaram ainda mais minha jornada literária. – Mariana S.</p>
-                            <img src="assets/pessoa2.jpg" alt="" class="mx-auto d-block">
+                            <p>Esse desafio foi incrível! Além de refletir sobre temas profundos, conquistei recompensas
+                                que incentivaram ainda mais minha jornada literária. – <br>Mariana S.</p>
+                            <img src="assets/pessoa2.jpg" alt="pessoa 2" class="mx-auto d-block">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="cardDepoimentos">
-                            <p>Os desafios me ajudam a sair da zona de conforto literária. E os prêmios são incríveis! – Lucas R.</p>
-                            <img src="assets/pessoa3.jpg" alt="" class="mx-auto d-block">
+                            <p>Os desafios me ajudam a sair da zona de conforto literária. E os prêmios são incríveis! –
+                                Lucas R.</p>
+                            <img src="assets/pessoa3.jpg" alt="pessoa 3" class="mx-auto d-block">
                         </div>
                     </div>
                 </div>
@@ -182,22 +201,26 @@
 
     </main>
     <!-- Promoção -->
-    <div class="promocao" id="promocao">
-        <p>Participe do desafio especial da semana e conquiste recompensas exclusivas. Complete a leitura do livro "A Jornada do Conhecimento" e compartilhe sua análise para ganhar pontos em dobro!</p>
+    <section class="promocao" id="promocao">
+        <span>x</span>
+        <div class="tituloPromocao">
+            <h2>Desafio da Semana! Leia: <p>"A Jornada do Conhecimento".</p>
+            </h2>
+        </div>
         <div class="containerContador">
             <div id="contador">
 
             </div>
             <button>Clica aqui</button>
         </div>
-    </div>
-
+    </section>
+    <button id="btnTopo" class="btn-topo" onclick="voltarAoTopo()">⬆</button>
     <!-- Footer -->
     <footer>
         <h1>Fale conosco</h1>
         <div class="containerSocial">
             <div class="contatos">
-                <p><strong><a href="/">(11)98211-2344</a></strong></p>
+                <p><a href="/">(11)98211-2344</a></p>
                 <i class="fa-brands fa-whatsapp social"></i>
 
             </div>
@@ -211,9 +234,9 @@
             </div>
         </div>
 
-        <div><img src="assets/cafe.jpg" alt="">
+        <div><img src="assets/promocao.jpg" alt="imagem da promocao">
         </div>
-        <p class="mb-0">&copy; Copyright 2025 - Todos os direitos reservados. Desenvolvido por <a
+        <p class="mb-0">&copy; Copyright 2025 - Todos os direitos reservados.<br> Desenvolvido por <a
                 href="https://danielondeveloper.vercel.app/" target="_blank">Daniel Souza</a>
         </p>
 
@@ -225,6 +248,7 @@
     <script src="js/main.js"></script>
     <script src="js/gridScript.js"></script>
     <script src="js/responsivo.js"></script>
+    <script src="js/animacao.js"></script>
 </body>
 
 </html>
