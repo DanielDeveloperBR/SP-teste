@@ -15,18 +15,20 @@ document.getElementById('telefone').addEventListener('input', (e) => {
     e.target.value = formatarTelefone(e.target.value);
 });
 
+//Função de enviar mensagem
 const mensagem = (msg) => {
     const mensagem = document.getElementById('mensagem')
     mensagem.style.display = 'block'
     return mensagem.textContent = msg
 }
 
+// Função para remover
 const removerMensagem = () => {
     document.getElementById('mensagem').textContent = ''
     return document.getElementById('mensagem').style.display = 'none'
 }
 
-
+// Formulário
 const formulario = document.getElementById('formTeste');
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -101,7 +103,6 @@ formulario.addEventListener('submit', (e) => {
         document.querySelector('footer').style.display = 'flex';
         removerMensagem()
     }, 1500)
-
         setTimeout(() => {
             h1.style.animation = `fadeOutUp 1s forwards`;
             setTimeout(() => {

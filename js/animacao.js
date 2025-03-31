@@ -1,3 +1,4 @@
+// Botão para fechar a promoção
 const botaoX = document.querySelector('.promocao span');
 botaoX.addEventListener('click', () => {
     const promocao = document.querySelector('.promocao');
@@ -12,7 +13,7 @@ botaoX.addEventListener('click', () => {
         depoimentos.parentNode.insertBefore(promocao, depoimentos);
         document.querySelector('#btnTopo').style.bottom = '20px';
         promocao.style.borderRadius = '15px';
-        promocao.style.position = 'unset'; // ou 'static', dependendo do seu layout
+        promocao.style.position = 'static';
     });
     botaoX.style.display = 'none';
 });
