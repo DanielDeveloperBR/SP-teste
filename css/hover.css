@@ -1,0 +1,44 @@
+button:hover{
+    opacity: .5;
+}
+
+.icon-link:hover {
+    text-decoration: underline !important;
+    opacity: .8;
+}
+
+@keyframes colorido {
+   0%{
+    background-color: var(--botao);
+    color: black;
+}
+50%{
+    background-color: var(--secundary);
+    color: green;
+    font-size: 1.8rem;
+}
+100%{
+    background-color: white;
+    color: red;
+   }
+}
+
+.promocao button:hover{
+    opacity: .9;
+    animation: colorido 300ms linear infinite;
+}
+
+.btn-topo:hover {
+    opacity: 1;
+    animation: moveAndRotate 400ms linear forwards;
+}
+
+.promocao span:hover{
+    font-size: 35px;
+    opacity: .8;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    opacity: .8;
+}

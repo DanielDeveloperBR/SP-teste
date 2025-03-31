@@ -4,10 +4,11 @@
         left: 0;
         top: 100%;
         width: 100%;
-        background-color: gray;
+        background-color: var(--secundary);
         position: absolute;
     }
-    nav li{
+
+    nav li {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -18,6 +19,20 @@
     #burguer {
         display: block;
     }
+
+    .promocao {
+        flex-direction: column;
+    }
+    .promcao button {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 650px){
+    .cardDepoimentos{
+        height: 200px;
+        max-width: 350px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -26,46 +41,42 @@
     }
 }
 
-@media (max-width: 605px) {
-    .cardDepoimentos {
-        max-width: 270px;
-        margin: 20px auto;
-    }
-}
 
-@media (max-width: 300px){
-    .contatos p{
+@media (max-width: 300px) {
+    .contatos p {
         display: none;
     }
 
-    .cardDepoimentos{
-        margin: 20px;
-        max-width: 290px;
+    .cardDepoimentos {
+        height: 300px;
+        max-width: 200px;
+
     }
 }
 
-@media (max-width: 450px){
-    .promocao{
-        flex-direction: column;
-    }
-  
-}
-
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .image-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
 
-@media all and (max-width: 380px){
+@media all and (max-width: 875px){
+    .promocao button{
+        max-width: 200px;
+    }
+}
 
-    .close{
+@media all and (max-width: 380px) {
+
+    .close {
         top: -20%;
     }
+
     .next {
         right: -15px;
     }
-    .prev{
+
+    .prev {
         left: -15px;
     }
 

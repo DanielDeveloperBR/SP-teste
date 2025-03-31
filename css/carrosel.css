@@ -1,5 +1,9 @@
-.carousel-item img {
+.carousel-item img{
     width: 100%;
+}
+
+#carroselPrincipal .carousel-item img{
+    border-radius: 5px;
 }
 
 .thumbnails {
@@ -69,7 +73,7 @@
 /* Botão de fechar (X) */
 .close {
     position: absolute;
-    top: -5%;
+    top: 20px;
     right: 0%;
     color: white;
     font-size: 32px;
@@ -112,3 +116,21 @@
     position: relative;
 }
 
+#depoimentosDeslize .carousel-control-prev-icon,
+#depoimentosDeslize .carousel-control-next-icon {
+    filter: invert(100%); 
+}
+.btn-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 1000;
+    background-color: transparent;
+    outline: 10px solid var(--primary);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 15px 5px var(--botao);
+}
