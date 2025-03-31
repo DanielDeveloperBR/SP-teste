@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
   }
 
   // Mostrar ou ocultar o botão
-  if (footerVisivel && footer.style.display === 'flex' && promocao.style.display == 'flex') {
+  if (footerVisivel && promocao.style.display == 'flex') {
       btnTopo.style.display = 'block';
   } else {
       btnTopo.style.display = 'none';

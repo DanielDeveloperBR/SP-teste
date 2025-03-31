@@ -100,7 +100,7 @@ formulario.addEventListener('submit', (e) => {
         formulario.style.display = 'none';
         document.querySelector('header').style.display = 'flex';
         document.querySelector('main').style.display = 'block';
-        document.querySelector('footer').style.display = 'flex';
+        document.querySelector('body').style.backgroundImage = 'none';
         removerMensagem()
     }, 1500)
         setTimeout(() => {
