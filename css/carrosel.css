@@ -133,7 +133,7 @@
     opacity: 0.8;
     z-index: 1000;
     background-color: transparent;
-    outline: 10px solid var(--primary);
+    outline: 4px solid var(--primary);
     border-radius: 10px;
     box-shadow: inset 0px 0px 15px 5px var(--botao);
 }
