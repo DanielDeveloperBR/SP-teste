@@ -1,10 +1,10 @@
 // Lista de imagens para navegar
 const images = [
-    "assets/produto1.webp",
-    "assets/produto2.webp",
+    "assets/produto1.jpg",
+    "assets/produto2.jpg",
     "assets/produto3.jpg",
-    "assets/produto1.webp",
-    "assets/produto2.webp",
+    "assets/produto1.jpg",
+    "assets/produto2.jpg",
     "assets/produto3.jpg"
 ];
 
