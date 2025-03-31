@@ -3,18 +3,16 @@ botaoX.addEventListener('click', () => {
     const promocao = document.querySelector('.promocao');
     const depoimentos = document.querySelector('.h2Depoimentos');
 
-    setTimeout(() => {
-        promocao.style.animation = 'fadeInDown .6s linear';
-        
-        // Move a seção de promoção para cima dos depoimentos
-        depoimentos.parentNode.insertBefore(promocao, depoimentos);
-        
-        setTimeout(() => {
-            document.querySelector('#btnTopo').style.bottom = '20px';
-            promocao.style.position = 'static';
-            promocao.style.borderRadius = '15px';
-        }, 600);
-    }, 800);
+    // Aplicar animação de entrada uma única vez
+    promocao.style.animation = 'fadeInDown 400ms';
 
+    // Remover animação após execução
+    promocao.addEventListener('animationend', () => {
+        promocao.style.animation = ''; // Remove a animação depois de concluída
+        depoimentos.parentNode.insertBefore(promocao, depoimentos);
+        document.querySelector('#btnTopo').style.bottom = '20px';
+        promocao.style.borderRadius = '15px';
+        promocao.style.position = 'unset'; // ou 'static', dependendo do seu layout
+    });
     botaoX.style.display = 'none';
 });
